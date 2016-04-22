@@ -4,7 +4,7 @@ class Table{
 	public $columns = array();
 	public $records = array();
 
-	protected $mysql;
+	public $mysql;
 	protected $table = "libdb";
 
 	protected $items = array();
@@ -21,6 +21,7 @@ class Table{
 			$this->columns[$row['Field']] = null;
 		}
 		//print_r($this->columns);
+		return $this->columns;
 	}
 
 	public function getAllRecords(){
@@ -53,6 +54,7 @@ class Table{
 
 $mytable = new Table;
 $mytable->getAllRecordsInJson();
+//$mytable->getCollums();
 
 
 

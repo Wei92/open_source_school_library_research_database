@@ -1,0 +1,129 @@
+/*********************
+style for the OSSLRD
+*********************/
+
+*{
+	border: none;
+	text-decoration: none;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	list-style: none;
+	font-size: 14px;
+}
+
+body{
+	background: #f6f6f6;
+}
+
+.clear{
+	clear: both;
+}
+
+.top, .footer{
+	width: 100%;
+}
+
+.top-inner, .nav, .main, .footer-inner{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.top{
+	height: 120px;
+	background: #5dcec6;
+	padding-top: 50px;
+	padding-left: 10px;
+}
+
+.top a{
+	color: #eee;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.nav{
+	margin-top: 0px;
+	padding: 0;
+}
+
+.nav ul{
+	margin-left: -40px;
+}
+.nav ul li a{
+	float: left;
+	display: block;
+	width: 299px;
+	background: #ffcf73;
+	color: #a66d00;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	margin-right: 1px;
+	background-image: url(images/nav-img2.png);
+	background-repeat: no-repeat;
+	background-position: 64px 0px;
+}
+
+.nav ul li a:hover{
+	background: #a66d00;
+	margin-right: 1px;
+	background-image: url(images/nav-img.png);
+	background-repeat: no-repeat;
+	background-position: 64px 0px;
+	color: #ffcf73;
+}
+
+#hover{
+	background: #a66d00;
+	margin-right: 1px;
+	background-image: url(images/nav-img.png);
+	background-repeat: no-repeat;
+	background-position: 64px 0px;
+	color: #ffcf73;
+}
+.main{
+	width: 1160px;
+	margin-top: 15px;
+	padding: 20px;
+	background: white;
+}
+
+.main p{
+	margin-top: 8px;
+	margin-bottom: 8px;
+	width: 1090px;
+	margin: 0 auto;
+	line-height: 20px;
+}
+
+.main a{
+	color: #A30008;
+}
+
+.main span{
+	font-weight: bold;
+	color: #A30008;
+}
+
+.footer{
+	margin-top: 20px;
+	height: 50px;
+	background:#5dcec6;
+	border-top: 1px solid #1D766F;
+	border-bottom: 1px solid #1D766F;
+	color: #0e7870;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

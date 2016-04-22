@@ -7,9 +7,9 @@ class DBConn{
 	const PASSWORD = 'blazoning,deceive}atrocious{';
 	const DATABASE = 'wwei1db';
 
-	private static $mysql;
+	public static $mysql;
 
-	private function __construct(){}
+	public function __construct(){}
 
 	public static function getConnection(){
 		if( empty(self::$mysql) ){
