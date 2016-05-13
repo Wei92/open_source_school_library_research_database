@@ -11,7 +11,14 @@
 	</div>
 
 
-<div class="main">main</div>
+<div class="main">
+	<p>Hi! As a researcher, you can not only browse and search the data in the database, but also make your own contribution.</p>
+	<br>
+	<div class="btn-addrecords"><a href="addrecords.php">Click here to add records into the database.</a></div>
+	<br>
+<?php include "datalist.php" ?>
+
+</div>
 
 
 <?php  include "footer.php" ?>

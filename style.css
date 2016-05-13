@@ -2,6 +2,8 @@
 style for the OSSLRD
 *********************/
 
+/************* start: common style for all pages; ***********************/
+
 *{
 	border: none;
 	text-decoration: none;
@@ -12,7 +14,7 @@ style for the OSSLRD
 }
 
 body{
-	background: #f6f6f6;
+	background: #fcfcfc;
 }
 
 .clear{
@@ -88,11 +90,22 @@ body{
 	background: white;
 }
 
+.main img{
+	float: left;
+	width: 420px;
+	margin-left: 30px;
+	margin-right: 40px;
+}
+
+.main .contact{
+	width: 100px;
+}
+
 .main p{
 	margin-top: 8px;
 	margin-bottom: 8px;
-	width: 1090px;
-	margin: 0 auto;
+	width: 1100px;
+	/**margin: 0 auto;**/
 	line-height: 20px;
 }
 
@@ -100,9 +113,9 @@ body{
 	color: #A30008;
 }
 
-.main span{
-	font-weight: bold;
-	color: #A30008;
+.main .span{
+	font-style: italic;
+	color: #fd000b;
 }
 
 .footer{
@@ -116,14 +129,76 @@ body{
 	padding-bottom: 15px;
 }
 
+.footer p{
+	width: 1200px;
+	text-align: center;
+}
+
+.footer a{
+	color: #333;
+	text-decoration: underline;
+}
+
+/************* end: common style for all pages; ***********************/
+
+
+
+
+/************* start: for researcher.php; ***********************/
+.btn-addrecords a{
+	display: block;
+	width: 299px;
+	background: #fd7279;
+	color: #fff;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	border: #fd7279 1px solid;
+}
+.btn-addrecords a:hover{
+	display: block;
+	width: 299px;
+	background: #fd7279;
+	color: #a30008;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	border: #fd7279 1px solid;
+}
+/************* end: for researcher.php; ***********************/
 
 
 
 
 
+/************* start: for addrecords.php; ***********************/
+.main input,select,textarea{
+	border: 1px #ccc solid;
+}
 
+.table-left{
+	width: 500px;
+	float: left;
+	border-right: 1px solid #ccc;
+}
 
+.table-right{
+	width: 530px;
+	padding-left: 40px;
+}
 
+#addsubmit{
+	padding: 15px;
+	margin-left: 70px;
+	margin-top: 40px;
+	background: #fd7279;
+	color: #fff;
+	height: 48px;
 
+	text-align: center;
+	border: #fd7279 1px solid;
+	cursor:pointer;
+}
+/************* end: for addrecords.php; ***********************/
 
 

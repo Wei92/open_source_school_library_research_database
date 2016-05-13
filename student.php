@@ -14,7 +14,7 @@
 <div class="main">
 <p>Hi! As a student, you can browse and search the data in the database.</p>
 	<br>
-<?php include "data-student.php" ?>
+<?php include "datalist.php" ?>
 
 </div>
 

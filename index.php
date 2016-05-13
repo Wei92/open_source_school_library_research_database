@@ -12,9 +12,13 @@
 
 
 <div class="main">
-	<p>This is an open source database for both students and researchers <span>in the field of School Library</span>.</p><br>
-	<p>If you are a student, click <a href="student.php">"For students"</a> above and browse and search the data.</p>
-	<p>If your are a researcher, click <a href="researcher.php">"For researchers"</a> above. You could not only browse and search the data, but also contribute your records to the database. To ensure the quality of the database, your submission will be sent to our administrators. They will evaluate the records as soon as possible. Once your record is confirmed, the system will send an email to you automatically.</p>
+	<img src="images/illu2.png">
+	<p>This is an open source database for both students and researchers <span class="span">in the field of School Library</span>.</p><br>
+	<p>If you are a student, click on <a href="student.php">"For students"</a> above and <span class="span">browse and search </span>the data.</p><br>
+	<p>If your are a researcher, click on <a href="researcher.php">"For researchers"</a> above. You could not only <span class="span">browse and search</span> the data, but also <span class="span">contribute your records to the database</span>. To ensure the quality of the database, your submission will be sent to our administrators directly. They will evaluate the records as soon as possible. Once your record is confirmed, the system will send an email to you automatically.</p>
+	<br>
+	<p>For more information, please click on <a href="contact.php">"Contact us"</a>.</p>
+	<div class="clear"></div>
 </div>
 
 

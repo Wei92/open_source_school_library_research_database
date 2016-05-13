@@ -3,18 +3,20 @@
 	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
     <!--<link rel="stylesheet" type="text/css" href="easyui/demo/demo.css">-->
-    <script type="text/javascript" src="easyui/jquery.min.js"></script>
-    <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+    <!--<script type="text/javascript" src="easyui/jquery.min.js"></script>-->
+    <!--<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
 
 	<table class="easyui-datagrid" title="OSSLRD" style="width:auto;height:250px"
-            toolbar="#toolbar" pagination="true"
-            rownumbers="true"  data-options="singleSelect:true,collapsible:true,url:'Table.php',method:'get'">
+            toolbar="#toolbar" pagination="true" iconCls="icon-save" 
+            rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'Table.php',method:'get'">
         <thead>
             <tr>
-                <th data-options="field:'id',width:80, align:'center'">ID</th>
+                <th data-options="field:'id',width:80, align:'center'" sortable="true">ID</th>
                 <th data-options="field:'title',width:100, align:'center'">Title</th>
                 <th data-options="field:'format',width:80,align:'center'">Format</th>
-                <th data-options="field:'year',width:80,align:'center'">Year</th>
+                <th data-options="field:'year',width:80,align:'center'" sortable="true">Year</th>
 
                 <th data-options="field:'author1',width:80, align:'center'">Author1</th>
                 <th data-options="field:'role1',width:80,align:'center'">Role1</th>
