@@ -1,6 +1,4 @@
-
-
-	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
     <!--<link rel="stylesheet" type="text/css" href="easyui/demo/demo.css">-->
     <!--<script type="text/javascript" src="easyui/jquery.min.js"></script>-->
@@ -8,6 +6,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
     
+    <script type="text/javascript" src="http://www.w3cschool.cc/try/jeasyui/datagrid-detailview.js"></script> <!--add details to each records-->
 
 	<table id="dg" class="easyui-datagrid" title="OSSLRD" style="width:auto;height:auto"
             toolbar="#toolbar" pagination="true"  
@@ -60,6 +59,8 @@
 
     <script type="text/javascript" src="easyui/datagrid-filter.js"></script>
     <script type="text/javascript">
+        
+        // Create filter to search data
         $(function(){
              var dg = $('#dg');
             dg.datagrid();  // create datagrid
@@ -91,6 +92,27 @@
             
         });
 
+
+        // Get details by expanding records
+        $('#dg').datagrid({
+            view: detailview,
+            detailFormatter:function(index,row){
+                return '<div class="ddv"></div>';
+            },
+            onExpandRow: function(index,row){
+                var ddv = $(this).datagrid('getRowDetail',index).find('div.ddv');
+                ddv.panel({
+                    border:false,
+                    cache:false,
+                    href:'data_getdetail.php?id='+index,
+                    onLoad:function(){
+                        $('#dg').datagrid('fixDetailRowHeight',index);
+                    }
+                });
+                $('#dg').datagrid('fixDetailRowHeight',index);
+            }
+        });
+    
     </script>
 
 	

@@ -139,6 +139,22 @@ body{
 	text-decoration: underline;
 }
 
+.ddv .data_detail p{
+	display: block;
+	color:#333;
+	width: 600px;
+	font-size: 11px;
+	margin-bottom: 2px;
+}
+
+.ddv .data_detail a{
+	display: block;
+	width: 600px;
+	padding: 5px;
+	font-size: 11px;
+	margin-bottom: 1px;
+}
+
 /************* end: common style for all pages; ***********************/
 
 
