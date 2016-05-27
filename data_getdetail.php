@@ -1,7 +1,7 @@
 <?php
 	include 'DBConn.php';
 
-	$id = $_REQUEST['id']+1;
+	$id = $_REQUEST['id'];
 	$query = "select * from libdb where id='$id'";
 	if (!$res = DBConn::getConnection()->query($query)) {
         die('There was an error running the query [' . $query->error . ']');

@@ -101,10 +101,11 @@
             },
             onExpandRow: function(index,row){
                 var ddv = $(this).datagrid('getRowDetail',index).find('div.ddv');
+                var rows = $('#dg').datagrid('getData').rows[index];
                 ddv.panel({
                     border:false,
                     cache:false,
-                    href:'data_getdetail.php?id='+index,
+                    href:'data_getdetail.php?id='+rows.id,
                     onLoad:function(){
                         $('#dg').datagrid('fixDetailRowHeight',index);
                     }
