@@ -1,5 +1,9 @@
-<?php include "header.php" ?>
+<?php 
+include "header.php";
+session_destroy();
+session_start();
 
+?>
 	<div class="nav">
 		<ul>
 			<li><a href="index.php" >Introduction</a></li>
@@ -44,9 +48,11 @@
 			<tr> <td>Class1:</td> <td><input type="text" name="class1" size="50"></td> </tr>
 			<tr> <td>Class2:</td> <td><input type="text" name="class2" size="50"></td> </tr>
 			<tr> <td>Class3:</td> <td><input type="text" name="class3" size="50"></td> </tr>
+			<tr> <td>CAPTCHA BELOW:</td> <td><input type="text" name="validate" value="" size=10> </td> </tr>
+			<tr> <td colspan="2"><img  style="width:150px;margin-left:-1px" title="click to refresh" src="captcha.php" align="absbottom" onclick="this.src='captcha.php?'+Math.random();"></img>
+</td> </tr>
 		</table>
-
-
+		
 		<table class="table-right" >
 		<tr><td colspan="2" style="font-weight: bold;">These forms are optional:</td></tr>
 			<tr> <td>Author2:</td> <td><input name="author2" type="text" size="50"></td> </tr>
@@ -66,8 +72,10 @@
 			<tr> <td>Affliation5:</td> <td><input name="affliation5" type="text" size="50"></td> </tr>
 		</table>
 
+		
 		<input type="submit" id="addsubmit" name="addsubmit" value="Confirmed the information and submit them to administrators" />
 		
+
 		<div class="clear"></div>
 	</form>
 

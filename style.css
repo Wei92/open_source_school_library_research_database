@@ -196,6 +196,7 @@ body{
 	width: 500px;
 	float: left;
 	border-right: 1px solid #ccc;
+	padding-right: 40px;
 }
 
 .table-right{
@@ -214,6 +215,11 @@ body{
 	text-align: center;
 	border: #fd7279 1px solid;
 	cursor:pointer;
+}
+
+.capcha{
+	width: 50%;
+	height: 50%;
 }
 /************* end: for addrecords.php; ***********************/
 
