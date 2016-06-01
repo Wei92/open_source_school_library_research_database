@@ -5,7 +5,7 @@ class Table{
 	public $records = array();
 
 	public $mysql;
-	protected $table = "libdb";
+	protected $table = "libdb2";
 
 	protected $items = array();
 
@@ -38,7 +38,7 @@ class Table{
 	}
 
 	public function getAllRecordsInJson(){
-		$query = "SELECT * FROM {$this->table}";                          
+		$query = "SELECT * FROM {$this->table} where auth='0'";                          
 		$result = $this->mysql->query($query);
 		while ($row = $result->fetch_assoc()) {
 			//echo json_encode($row);

@@ -52,6 +52,8 @@
                 <th data-options="field:'class1'" sortable="true"  >Class1</th>
                 <th data-options="field:'class2'" sortable="true"  >Class2</th>
                 <th data-options="field:'class3'" sortable="true"  >Class3</th>
+
+                <!--<th data-options="field:'auth'" sortable="false">auth</th>-->
             </tr>
         </thead>
     </table>
