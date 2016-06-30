@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome page for administrators</title>
+	<title>admin</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -14,6 +14,7 @@
 		<tr> <td colspan="2" style="color:red"><?php echo $_COOKIE['alertlog']?></td></tr>
 		<tr> <td>Username:</td> <td><input type="text" size=50 name="username"></td> </tr>
 		<tr> <td>Password:</td> <td><input type="password" size=50 name="password"></td> </tr>
+		<tr> <td>Reference:</td> <td><input type="text" size=50 name="ref"></td> </tr>
 		<tr><td></td><td><input type="submit" id="login" name="login" value="Log In" /></td></tr>
 	</form>
 </table>
@@ -24,8 +25,8 @@
 		<tr> <td colspan="2" style="color:red"><?php echo $_COOKIE['alertsign']?></td></tr>
 		<tr> <td>Username:</td> <td><input type="text" size=50 name="username"></td> </tr>
 		<tr> <td>Password:</td> <td><input type="text" size=50 name="password"></td> </tr>
-		<tr> <td>Reference Number1:</td> <td><input type="password" size=50 name="ref"></td> </tr>
-		<tr> <td>Reference Number2:</td> <td><input type="password" size=50 name="ref"></td> </tr>
+		<tr> <td>Reference Number1:</td> <td><input type="text" size=50 name="ref1"></td> </tr>
+		<tr> <td>Reference Number2:</td> <td><input type="text" size=50 name="ref2"></td> </tr>
 		<tr><td></td><td><input type="submit" id="signup" name="signup" value="Sign Up" /></td></tr>
 	</form>
 
