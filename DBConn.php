@@ -17,8 +17,8 @@ class DBConn{
 			self::$mysql->set_charset('utf8'); 
 			//echo "string\n";
 		}else{
-			echo "Error-text: " . $mysql->error . "<br> \n";
-			echo "Error-number: " . $mysql->errno . "<br> \n";
+			//echo "Error-text: " . $mysql->error . "<br> \n";
+			//echo "Error-number: " . $mysql->errno . "<br> \n";
 		}
 
 		// returen the connection to the client
