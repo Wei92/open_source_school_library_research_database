@@ -2,8 +2,8 @@
 
 include_once 'DBConn.php';
 $ref0 = "YF@G^%^&*C"; // check the ref number
-$encrpt1 = "albertaedmonton";
-$encrpt2 = "education";
+$encrpt1 = "albertaedmontonG*^(HUIJIP";
+
 
 if ($_POST['ref'] === $ref0) {
 	// auth successed
@@ -12,9 +12,8 @@ if ($_POST['ref'] === $ref0) {
 		$value = mysql_escape_string($value);
 	}
 
-	$password = $_POST['password'];
-	$password = md5($encrpt1);
-	$password = md5($encrpt2);
+	$password = md5($_POST['password'].$encrpt1);
+
 
 	$query = 'select password from libadmin where username = "'.$_POST['username'].'"';
 	

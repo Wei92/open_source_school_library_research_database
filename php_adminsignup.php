@@ -4,7 +4,7 @@ include_once 'DBConn.php';
 $ref1 = "$%^T&FGH90JKY5ThU(*FVGHBJNM";
 $ref2 = "edmonton".date("Ymd");
 $encrpt1 = "albertaedmonton";
-$encrpt2 = "education";
+
 
 
 if ($_POST['ref1'] === $ref1 && $_POST['ref2'] === $ref2) {
@@ -24,10 +24,8 @@ if ($_POST['ref1'] === $ref1 && $_POST['ref2'] === $ref2) {
 		echo "<script language=javascript>location.href='admin.php'</script>";
 	}
 
+	$password = md5($_POST['password'].$encrpt1);
 
-	$password = $_POST['password'];
-	$password = md5($encrpt1);
-	$password = md5($encrpt2);
 	$query = 'INSERT INTO libadmin VALUES (\N,'.'"'.$_POST['username'].'",'.'"'.$password.'")';
 	if ( $res = DBConn::getConnection()->query($query)) {
         echo "Sign up succuss. Your username is " . $_POST['username'].". Your password is ". $_POST['password'].". Please keep them in a secure way.";
