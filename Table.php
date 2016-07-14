@@ -1,10 +1,11 @@
 <?php
 include 'DBConn.php';
 class Table{
-	public $columns = array();
+	//public $columns = array();
 	public $records = array();
 
 	public $mysql;
+	
 	protected $table = "libdb2";
 
 	protected $items = array();
@@ -13,7 +14,7 @@ class Table{
 		$this->mysql = DBConn::getConnection(); // get connection
 	}
 
-	public function getCollums(){
+	/*public function getCollums(){
 		$query = "DESC {$this->table}";
 		$result = $this->mysql->query($query);
 
@@ -22,22 +23,21 @@ class Table{
 		}
 		//print_r($this->columns);
 		return $this->columns;
-	}
+	}*/
 
-	public function getAllRecords(){
-		$query = "SELECT * FROM {$this->table}";
-		$result = $this->mysql->query($query);
-		while ($row = $result->fetch_assoc()) {
-			echo "<tr>";
-			foreach ($row as $key => $value) {
-				echo "<td>" . $value . "</td>";
-			}
-			echo "</tr>";
-		}
 
-	}
 
 	public function getAllRecordsInJson(){
+		// get deleted records
+		$query = "SELECT * FROM {$this->table}";                          
+		$result = $this->mysql->query($query);
+		while ($row = $result->fetch_assoc()) {
+			array_push($this->items, $row);
+		}
+		echo json_encode($this->items);
+	}
+
+	public function getCfmRecordsInJson(){
 		$query = "SELECT * FROM {$this->table} where auth='0'";                          
 		$result = $this->mysql->query($query);
 		while ($row = $result->fetch_assoc()) {
@@ -50,13 +50,30 @@ class Table{
 		//$result[] = $this->items;
 		echo json_encode($this->items);
 	}
+
+	public function getNotCfmRecordsInJson(){
+		// get confirmed records
+		$query = "SELECT  FROM {$this->table} where auth='1'";                          
+		$result = $this->mysql->query($query);
+		while ($row = $result->fetch_assoc()) {
+			array_push($this->items, $row);
+		}
+
+		echo json_encode($this->items);
+	}
+
+	public function getDltRecordsInJson(){
+		// get deleted records
+		$query = "SELECT * FROM {$this->table} where auth='2'";                          
+		$result = $this->mysql->query($query);
+		while ($row = $result->fetch_assoc()) {
+			array_push($this->items, $row);
+		}
+		echo json_encode($this->items);
+	}
+
+
 }
-
-$mytable = new Table;
-$mytable->getAllRecordsInJson();
-//$mytable->getCollums();
-
-
 
 
 ?>

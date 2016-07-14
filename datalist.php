@@ -1,16 +1,17 @@
     <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
-    <!--<link rel="stylesheet" type="text/css" href="easyui/demo/demo.css">-->
-    <!--<script type="text/javascript" src="easyui/jquery.min.js"></script>-->
-    <!--<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
     
-    <script type="text/javascript" src="http://www.w3cschool.cc/try/jeasyui/datagrid-detailview.js"></script> <!--add details to each records-->
+    <script type="text/javascript" src="easyui/datagrid-detailview.js"></script> 
 
-	<table id="dg" class="easyui-datagrid" title="OSSLRD" style="width:auto;height:auto"
+
+
+
+
+    <table id="dg" class="easyui-datagrid" title="OSSLRD" style="width:auto;height:auto"
             toolbar="#toolbar" pagination="true"  
-            rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'Table.php',method:'get',remoteFilter:false">
+            rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'getDatalist.php',method:'get',remoteFilter:false">
         <thead>
             <tr>
                 <th data-options="field:'id'" sortable="true"  >ID</th>
@@ -118,6 +119,6 @@
     
     </script>
 
-	
+    
 
 

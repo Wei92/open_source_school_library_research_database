@@ -10,11 +10,11 @@ $encrpt1 = "albertaedmontonG*^(HUIJIP";
 if ($_POST['ref1'] === $ref1 && $_POST['ref2'] === $ref2) {
 	// auth successed
 	
-	/**
+	
 	foreach ($_POST as $key => $value) {
 		$value = mysql_escape_string($value);
 	}
-	**/
+	
 
 	$query = 'select * from libadmin where username = "'.$_POST['username'].'"';
 	$res = DBConn::getConnection()->query($query);
