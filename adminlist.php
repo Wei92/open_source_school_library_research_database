@@ -12,9 +12,9 @@
     <div id="tt" class="easyui-tabs" style="width:auto;height:auto;">
 
         <div title="Not Confirmed Records" style="padding:20px;display:none;">
-            <table id="dg" class="easyui-datagrid" title="OSSLRD" style="width:auto;height:auto"
+            <table id="dg" class="easyui-datagrid" title="Not Confirmed Records" style="width:auto;height:auto"
                 toolbar="#toolbar" pagination="true"  
-                rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'getadminlist.php',method:'get',remoteFilter:false">
+                rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'getNotCfmRecordsInJson.php',method:'get',remoteFilter:false">
                 <thead>
                     <tr>
                         <th data-options="field:'id'" sortable="true"  >ID</th>
@@ -37,8 +37,6 @@
                         <th data-options="field:'class1'" sortable="true"   >Class1</th>
                         <th data-options="field:'class2'" sortable="true"   >Class2</th>
                         <th data-options="field:'class3'" sortable="true"   >Class3</th>
-
-                        <!--<th data-options="field:'auth'" sortable="false">auth</th>-->
                     </tr>
             </thead>
             </table>
@@ -47,7 +45,7 @@
 
 
     <div title="Deleted Records" data-options="closable:false" style="overflow:auto;padding:20px;display:none;">
-        tab2
+       tab2
     </div>
 
 
@@ -56,7 +54,7 @@
     </div>
 
     <div title="All Records" data-options="closable:false" style="padding:20px;display:none;">
-        tab3
+        tab4
     </div>
 
 
@@ -114,7 +112,7 @@
                 ddv.panel({
                     border:false,
                     cache:false,
-                    href:'data_getdetail.php?id='+rows.id,
+                    href:'data_updatedetail.php?id='+rows.id,
                     onLoad:function(){
                         $('#dg').datagrid('fixDetailRowHeight',index);
                     }
@@ -122,6 +120,13 @@
                 $('#dg').datagrid('fixDetailRowHeight',index);
             }
         });
+
+
+        // update content after click tabs
+        var tab = $('#tt').tabs('getSelected');  // get selected panel
+
+
+
     
     </script>
 

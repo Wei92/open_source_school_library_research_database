@@ -49,7 +49,7 @@ session_start();
 			<tr> <td>Method1:</td> <td><input required="true" class="easyui-validatebox" type="text" name="method1" size="50"></td> </tr>
 			
 
-			<tr> <td>Source:</td> <td><input required="true" class="easyui-validatebox" type="text" name="method1" size="50"></td> </tr>
+			<tr> <td>Source:</td> <td><input required="true" class="easyui-validatebox" type="text" name="source" size="50"></td> </tr>
 
 			<tr> <td>Abstract:</td> <td> <textarea required="true" class="easyui-validatebox" cols="49" rows="4" id="regintro" name="abstract"></textarea></td> </tr>
 

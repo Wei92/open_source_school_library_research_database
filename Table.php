@@ -53,7 +53,7 @@ class Table{
 
 	public function getNotCfmRecordsInJson(){
 		// get confirmed records
-		$query = "SELECT  FROM {$this->table} where auth='1'";                          
+		$query = "SELECT * FROM {$this->table} where auth='1'";                          
 		$result = $this->mysql->query($query);
 		while ($row = $result->fetch_assoc()) {
 			array_push($this->items, $row);
