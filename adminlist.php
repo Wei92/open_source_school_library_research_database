@@ -12,6 +12,8 @@
     <div id="tt" class="easyui-tabs" style="width:auto;height:auto;">
 
         <div title="Not Confirmed Records" style="padding:20px;display:none;">
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true"
+                   onclick="editReviewer()">Open dialog to Edit</a>
             <table id="dg" class="easyui-datagrid" title="Not Confirmed Records" style="width:auto;height:auto"
                 toolbar="#toolbar" pagination="true"  
                 rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'getNotCfmRecordsInJson.php',method:'get',remoteFilter:false">
@@ -40,6 +42,9 @@
                     </tr>
             </thead>
             </table>
+            <div id="reviewerToolbar">
+                
+            </div>
         </div>
 
 
@@ -122,8 +127,8 @@
         });
 
 
-        // update content after click tabs
-        var tab = $('#tt').tabs('getSelected');  // get selected panel
+        // save updates
+        
 
 
 
