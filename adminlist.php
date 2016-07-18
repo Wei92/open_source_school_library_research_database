@@ -19,7 +19,7 @@
         <div title="Not Confirmed Records" style="padding:20px;display:none;">
             
             <div id="reviewerToolbar">
-                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="opendlg()">Open dialog to Edit</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="opendlg()">Open dialog to edit selected record</a>
             </div>
             
 
@@ -116,8 +116,8 @@
         </table>
         <div class="clear"></div>
                 </form>
-                <div id="reviewer-dlg-buttons">
-                    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUpdates()"
+                <div id="saveEdit">
+                    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUpdate()"
                            style="width:90px">Save</a>
                     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"
                         onclick="javascdript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
@@ -219,6 +219,29 @@
         }
 
 
+        // save updates
+        function saveUpdate(){
+            url = 'saveUpdate.php';
+             $('#detail-form').form('submit', {
+                    url: url,
+                    onSubmit: function () {
+                        return $(this).form('validate');
+                    },
+                    success: function (result) {
+                        var result = eval('(' + result + ')');
+                        if (result.errorMsg) {
+                            $.messager.show({
+                                title: 'Error',
+                                msg: result.errorMsg
+                            });
+                        } else {
+
+                            $('#detail-form').dialog('close');      // close the dialog
+                            $('#detail-form').datagrid('reload'); // reload the user data
+                        }
+                    }
+                });
+        }
 
     
     </script>
