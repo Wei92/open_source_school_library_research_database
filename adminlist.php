@@ -7,13 +7,22 @@
     
     <script type="text/javascript" src="http://www.w3cschool.cc/try/jeasyui/datagrid-detailview.js"></script> 
     <!--add details to each records-->
+    <style type="text/css">
+        input{
+            border: 1px solid #ccc;
+        }
+    </style>
 
-	
+
     <div id="tt" class="easyui-tabs" style="width:auto;height:auto;">
 
         <div title="Not Confirmed Records" style="padding:20px;display:none;">
-            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true"
-                   onclick="editReviewer()">Open dialog to Edit</a>
+            
+            <div id="reviewerToolbar">
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="opendlg()">Open dialog to Edit</a>
+            </div>
+            
+
             <table id="dg" class="easyui-datagrid" title="Not Confirmed Records" style="width:auto;height:auto"
                 toolbar="#toolbar" pagination="true"  
                 rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'getNotCfmRecordsInJson.php',method:'get',remoteFilter:false">
@@ -42,9 +51,76 @@
                     </tr>
             </thead>
             </table>
-            <div id="reviewerToolbar">
-                
+
+            <div id="dlg" class="easyui-dialog" style="top:10%;width:1090px;height:500px;padding:0 20px;"
+             closed="true" buttons="#reviewer-dlg-buttons">
+
+                <form id="detail-form" method="post">
+                    <table class="table-left">
+            <tr><td colspan="2" style="font-weight: bold;">These forms are mandatory:</td></tr>
+            <tr> <td>Title:</td> <td><input required="true" class="easyui-validatebox" type="text" size=50 name="title"></td> </tr>
+
+            <tr> <td>Format:</td> <td><select name="format" required="true" class="easyui-combobox"><option value="C">Conference(C)</option><option value="J">Journals(J)</option><option value="DT">Dissertations/Thesis(DT)</option><option value="R">Research papers(R)</option></select> </td> </tr>
+
+            <tr> <td>Year:</td> <td><input required="true" class="easyui-validatebox" name="year" type="text" size="4" maxlength="4" onkeyup='this.value=this.value.replace(/\D/gi,"")'></td> </tr>
+
+            <tr> <td>Author1:</td> <td><input required="true" class="easyui-validatebox" name="author1" type="text" size="50"></td> </tr>
+            
+
+            <tr> <td>Country:</td> <td><input required="true" class="easyui-validatebox" type="text" name="country" size="50"></td> </tr>
+
+            <tr> <td>Insititusion:</td> <td><input required="true" class="easyui-validatebox" type="text" name="conference" size="50"></td> </tr>
+
+            <tr> <td>Location:</td> <td><input required="true" class="easyui-validatebox" type="text" name="location" size="50"></td> </tr>
+
+            <tr> <td>Method1:</td> <td><input required="true" class="easyui-validatebox" type="text" name="method1" size="50"></td> </tr>
+            
+
+            <tr> <td>Source:</td> <td><input required="true" class="easyui-validatebox" type="text" name="source" size="50"></td> </tr>
+
+            <tr> <td>Abstract:</td> <td> <textarea required="true" class="easyui-validatebox" cols="49" rows="4" id="regintro" name="abstract"></textarea></td> </tr>
+
+            <tr> <td>Class1:</td> <td><input required="true" class="easyui-validatebox" type="text" name="class1" size="50"></td> </tr>
+        </table>
+        
+        <table class="table-right" >
+        <tr><td colspan="2" style="font-weight: bold;">These forms are optional:</td></tr>
+
+            <tr> <td>Role1:</td> <td><input  class="easyui-validatebox" name="role1" type="text" size="50"></td> </tr>
+            <tr> <td>Affliation1:</td> <td><input  class="easyui-validatebox" name="affliation1" type="text" size="50"></td> </tr>
+
+            <tr> <td>Author2:</td> <td><input class="easyui-validatebox" name="author2" type="text" size="50"></td> </tr>
+            <tr> <td>Role2:</td> <td><input class="easyui-validatebox" name="role2" type="text" size="50"></td> </tr>
+            <tr> <td>Affliation2:</td> <td><input class="easyui-validatebox" name="affliation2" type="text" size="50"></td> </tr>
+
+            <tr> <td>Author3:</td> <td><input class="easyui-validatebox" name="author3" type="text" size="50"></td> </tr>
+            <tr> <td>Role3:</td> <td><input class="easyui-validatebox" name="role3" type="text" size="50"></td> </tr>
+            <tr> <td>Affliation3:</td> <td><input class="easyui-validatebox" name="affliation3" type="text" size="50"></td> </tr>
+
+            <tr> <td>Author4:</td> <td><input class="easyui-validatebox" name="author4" type="text" size="50"></td> </tr>
+            <tr> <td>Role4:</td> <td><input class="easyui-validatebox" name="role4" type="text" size="50"></td> </tr>
+            <tr> <td>Affliation4:</td> <td><input class="easyui-validatebox" name="affliation4" type="text" size="50"></td> </tr>
+
+            <tr> <td>Author5:</td> <td><input class="easyui-validatebox" name="author5" type="text" size="50"></td> </tr>
+            <tr> <td>Role5:</td> <td><input class="easyui-validatebox" name="role5" type="text" size="50"></td> </tr>
+            <tr> <td>Affliation5:</td> <td><input class="easyui-validatebox" name="affliation5" type="text" size="50"></td> </tr>
+
+            <tr> <td>Method2:</td> <td><input class="easyui-validatebox" type="text" name="method2" size="50"></td> </tr>
+            <tr> <td>Method3:</td> <td><input  class="easyui-validatebox" type="text" name="method3" size="50"></td> </tr>
+
+            <tr> <td>Class2:</td> <td><input class="easyui-validatebox" type="text" name="class2" size="50"></td> </tr>
+            <tr> <td>Class3:</td> <td><input class="easyui-validatebox" type="text" name="class3" size="50"></td> </tr>
+        </table>
+        <div class="clear"></div>
+                </form>
+                <div id="reviewer-dlg-buttons">
+                    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUpdates()"
+                           style="width:90px">Save</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"
+                        onclick="javascdript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
+                </div>
             </div>
+            
         </div>
 
 
@@ -117,7 +193,7 @@
                 ddv.panel({
                     border:false,
                     cache:false,
-                    href:'data_updatedetail.php?id='+rows.id,
+                    href:'data_getdetail.php?id='+rows.id,
                     onLoad:function(){
                         $('#dg').datagrid('fixDetailRowHeight',index);
                     }
@@ -127,8 +203,17 @@
         });
 
 
-        // save updates
-        
+        // open dialogs
+        function opendlg() {
+            var row = $('#dg').datagrid('getSelected');
+            //alert(row.id);
+            if (row) {
+                $('#dlg').dialog('open');
+                $('#detail-form').form('load', 'data_updatedetail.php?id='+row.id);
+                //url = 'data_updatedetail.php?id=' + row.id;
+            } else
+                alert('Please select a reviewer first');
+        }
 
 
 

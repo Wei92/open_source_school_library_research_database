@@ -72,6 +72,14 @@ class Table{
 		echo json_encode($this->items);
 	}
 
+	public function getRecordDetail($id){
+		$query = "SELECT * FROM {$this->table} where id=$id";                          
+		$result = $this->mysql->query($query);
+		while ($row = $result->fetch_assoc()) {
+			array_push($this->items, $row);
+		}
+		echo json_encode($this->items);
+	}
 
 }
 

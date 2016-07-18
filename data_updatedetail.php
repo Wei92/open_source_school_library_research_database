@@ -7,17 +7,16 @@
         die('There was an error running the query [' . $query->error . ']');
     }
     $row = $res->fetch_assoc();
+    echo json_encode($row);
     
+    /*echo '<div class="data_detail">';
     
-    echo '<div class="data_detail">';
-    echo '<form action="php-updaterecords.php" method="get" id="updaterecords" name="updaterecords">';
-    
-    echo '<table style="background:#ffd9db;margin:0px 1px" class="table-left">';
+    echo '<table style="background:#ffd9db;margin:0px 1px;padding-bottom:10px" class="table-left">';
 
-                echo '<tr><td>Title:</td><td><input type="text" name="title" size="50" value="'.$row['title'].'"></td></tr>';
+                echo '<tr><td>Title:</td><td><input required="true" class="easyui-validatebox" type="text" name="title" size="50" value="'.$row['title'].'"></td></tr>';
                 if ($row['format']=="C") {
                     echo '<tr><td>Format:</td><td> 
-                <select name="format">
+                <select name="format" required="true" class="easyui-combobox">
                     <option value="C" selected="selected">Conference(C)</option>
                     <option value="J">Journals(J)</option>
                     <option value="DT">Dissertations/Thesis(DT)</option>
@@ -26,7 +25,7 @@
                 </td></tr>';
                 }elseif ($row['format']=="J") {
                     echo '<tr><td>Format:</td><td> 
-                <select name="format">
+                <select name="format" required="true" class="easyui-combobox">
                     <option value="C">Conference(C)</option>
                     <option value="J" selected="selected">Journals(J)</option>
                     <option value="DT">Dissertations/Thesis(DT)</option>
@@ -35,7 +34,7 @@
                 </td></tr>';
                 }elseif ($row['format']=="R") {
                     echo '<tr><td>Format:</td><td> 
-                <select name="format">
+                <select name="format" required="true" class="easyui-combobox">
                     <option value="C">Conference(C)</option>
                     <option value="J" selected="selected">Journals(J)</option>
                     <option value="DT">Dissertations/Thesis(DT)</option>
@@ -44,7 +43,7 @@
                 </td></tr>';
                 }elseif ($row['format']=="DT") {
                     echo '<tr><td>Format:</td><td> 
-                <select name="format">
+                <select name="format" required="true" class="easyui-combobox">
                     <option value="C">Conference(C)</option>
                     <option value="J">Journals(J)</option>
                     <option value="DT" selected="selected">Dissertations/Thesis(DT)</option>
@@ -53,7 +52,7 @@
                 </td></tr>';
                 }else{
                     echo '<tr><td>Format:</td><td> 
-                <select name="format">
+                <select name="format" required="true" class="easyui-combobox">
                     <option value="C" selected="selected">Conference(C)</option>
                     <option value="J">Journals(J)</option>
                     <option value="DT">Dissertations/Thesis(DT)</option>
@@ -61,15 +60,15 @@
                 </select>
                 </td></tr>';
                 }
-                echo '<tr><td>Year:</td><td><input type="text" name="year" size="50" value="'.$row['year'].'"></td></tr>';
-                echo '<tr><td>Author1:</td><td> <input type="text" name="author1" size="50" value="'.$row['author1'].'"></td></tr>';
-                echo '<tr><td>Country:</td><td> <input type="text" name="country" size="50" value="'.$row['country'].'"></td></tr>';
-                echo '<tr><td>Insititustion:</td><td> <input type="text" name="conference" size="50" value="'.$row['conference'].'"></td></tr>';
-                echo '<tr><td>Location:</td><td> <input type="text" name="location" size="50" value="'.$row['location'].'"></td></tr>';
-                echo '<tr><td>Method1:</td><td> <input type="text" name="method1" size="50" value="'.$row['year'].'"></td></tr>';
-                echo '<tr><td>Source:</td><td> <input type="text" name="abstract" size="50" value="'.$row['source'].'"></td></tr>';
-                echo '<tr><td>Abstract:</td><td> <textarea cols="49" rows="4" name="abstract" size="50">'.$row['abstract'].'</textarea></td></tr>';
-                echo '<tr><td>Class1:</td><td> <input type="text" name="class1" size="50" value="'.$row['class1'].'"></td></tr>';
+                echo '<tr><td>Year:</td><td><input required="true" class="easyui-validatebox" type="text" name="year" size="50" value="'.$row['year'].'"></td></tr>';
+                echo '<tr><td>Author1:</td><td> <input  required="true" class="easyui-validatebox"type="text" name="author1" size="50" value="'.$row['author1'].'"></td></tr>';
+                echo '<tr><td>Country:</td><td> <input  required="true" class="easyui-validatebox"type="text" name="country" size="50" value="'.$row['country'].'"></td></tr>';
+                echo '<tr><td>Insititustion:</td><td> <input  required="true" class="easyui-validatebox" type="text" name="conference" size="50" value="'.$row['conference'].'"></td></tr>';
+                echo '<tr><td>Location:</td><td> <input required="true" class="easyui-validatebox" type="text" name="location" size="50" value="'.$row['location'].'"></td></tr>';
+                echo '<tr><td>Method1:</td><td> <input required="true" class="easyui-validatebox" type="text" name="method1" size="50" value="'.$row['year'].'"></td></tr>';
+                echo '<tr><td>Source:</td><td> <input required="true" class="easyui-validatebox" type="text" name="abstract" size="50" value="'.$row['source'].'"></td></tr>';
+                echo '<tr><td>Abstract:</td><td> <textarea required="true" class="easyui-validatebox" cols="49" rows="4" name="abstract" size="50">'.$row['abstract'].'</textarea></td></tr>';
+                echo '<tr><td>Class1:</td><td> <input required="true" class="easyui-validatebox" type="text" name="class1" size="50" value="'.$row['class1'].'"></td></tr>';
 
                 if ($row['auth']=="0") {
                     echo '<tr><td>Edit the status of record:</td><td> 
@@ -126,14 +125,10 @@
 
     echo "</table>";
     echo '
-        <input style="margin-left:430px;margin-bottom:20px;margin-top:0px" type="submit" id="addsubmit" name="addsubmit" value="Save changes" />
         <div class="clear"></div>
     ';
-    echo "</div>";
-    
-    echo "</form>";
-	
-   //select name="format" required="true" class="easyui-combobox"><option value="C">Conference(C)</option><option value="J">Journals(J)</option><option value="DT">Dissertations/Thesis(DT)</option><option value="R">Research papers(R)</option></select>
+    echo "</div>";*/
+
 ?>
 
 
