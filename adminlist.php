@@ -52,7 +52,7 @@
             </thead>
             </table>
 
-            <div id="dlg" class="easyui-dialog" style="top:10%;width:1090px;height:500px;padding:0 20px;"
+            <div id="dlg" class="easyui-dialog" style="top:10%;width:1090px;height:510px;padding:0 20px;"
              closed="true" buttons="#reviewer-dlg-buttons">
 
                 <form id="detail-form" method="post">
@@ -81,6 +81,9 @@
             <tr> <td>Abstract:</td> <td> <textarea required="true" class="easyui-validatebox" cols="49" rows="4" id="regintro" name="abstract"></textarea></td> </tr>
 
             <tr> <td>Class1:</td> <td><input required="true" class="easyui-validatebox" type="text" name="class1" size="50"></td> </tr>
+
+            <tr> <td>Confirm?</td> <td><select name="auth" required="true" class="easyui-combobox"><option value="0">Confirmed</option><option value="1">Not Confirmed</option><option value="2">Deleted</option></select> </td> </tr>
+
         </table>
         
         <table class="table-right" >
