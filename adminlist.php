@@ -202,26 +202,30 @@
 
         // save updates
         function saveUpdate(){
-            url = 'saveUpdate.php';
-             $('#detail-form').form('submit', {
-                    url: url,
-                    onSubmit: function () {
-                        return $(this).form('validate');
-                    },
-                    success: function (result) {
-                        var result = eval('(' + result + ')');
-                        if (result.errorMsg) {
-                            $.messager.show({
-                                title: 'Error',
-                                msg: result.errorMsg
-                            });
-                        } else {
+            $('#detail-form').form('submit', {
 
-                            $('#detail-form').dialog('close');      // close the dialog
-                            $('#detail-form').datagrid('reload'); // reload the user data
-                        }
+                type: "POST",
+                url: "php-saveUpdate.php",
+                onSubmit: function () {
+                    return $(this).form('validate');
+                },
+
+                success: function(msg) {
+                    if (msg.errorMsg) {
+                        $.messager.show({
+                            title: 'Error',
+                            msg: result.errorMsg
+                        });
+                    }else{
+                        $('#detail-form').dialog('close');      // close the dialog
+                        $('#dg1').datagrid('reload'); // reload the user data
+                        $('#dg2').datagrid('reload');
+                        $('#dg3').datagrid('reload');
+                        $('#dg4').datagrid('reload');
                     }
-                });
+                    
+                }
+            });
         }
 
     
