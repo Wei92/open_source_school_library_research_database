@@ -34,7 +34,7 @@
             </div>
             <table id="dg2" class="easyui-datagrid" title="Not Confirmed Records" style="width:auto;height:auto"
                 toolbar="#toolbar" pagination="true"  
-                rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'getDltCfmRecordsInJson.php',method:'get',remoteFilter:false">
+                rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'getDltRecordsInJson.php',method:'get',remoteFilter:false">
                <?php include 'adminlist-content.php' ?> 
     </div>
 
@@ -183,6 +183,8 @@
             }
         });
 
+        // set a scopte i
+        var i = 0;
 
         // open dialogs
         function opendlg(a) {
@@ -191,10 +193,10 @@
             if (a==3) {var row = $('#dg3').datagrid('getSelected');}
             if (a==4) {var row = $('#dg4').datagrid('getSelected');}
             //alert(row.id);
+            i = row.id;
             if (row) {
                 $('#dlg').dialog('open');
                 $('#detail-form').form('load', 'data_updatedetail.php?id='+row.id);
-                //url = 'data_updatedetail.php?id=' + row.id;
             } else
                 alert('Please select a reviewer first');
         }
@@ -202,30 +204,31 @@
 
         // save updates
         function saveUpdate(){
+            //alert(i);
+
             $('#detail-form').form('submit', {
 
                 type: "POST",
-                url: "php-saveUpdate.php",
+                url: "php-saveUpdate.php?id="+i,
+
                 onSubmit: function () {
                     return $(this).form('validate');
                 },
 
                 success: function(msg) {
-                    if (msg.errorMsg) {
-                        $.messager.show({
-                            title: 'Error',
-                            msg: result.errorMsg
-                        });
-                    }else{
                         $('#detail-form').dialog('close');      // close the dialog
                         $('#dg1').datagrid('reload'); // reload the user data
                         $('#dg2').datagrid('reload');
                         $('#dg3').datagrid('reload');
                         $('#dg4').datagrid('reload');
-                    }
-                    
                 }
             });
+
+            $('#detail-form').dialog('close');      // close the dialog
+            $('#dg1').datagrid('reload'); // reload the user data
+            $('#dg2').datagrid('reload');
+            $('#dg3').datagrid('reload');
+            $('#dg4').datagrid('reload');
         }
 
     
