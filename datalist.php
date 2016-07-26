@@ -11,7 +11,7 @@
 
     <table id="dg" class="easyui-datagrid" title="OSSLRD" style="width:auto;height:auto"
             toolbar="#toolbar" pagination="true"  
-            rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'getDatalist.php',method:'get',remoteFilter:false">
+            rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'getCfmRecordsInJson.php',method:'get',remoteFilter:false">
         <thead>
             <tr>
                 <th data-options="field:'id'" sortable="true"  >ID</th>

@@ -92,6 +92,6 @@
                     <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUpdate()"
                            style="width:90px">Save</a>
                     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"
-                        onclick="javascdript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
+                        onclick="javascdript:$('#dlg').dialog('close')" style="width:90px">Close</a>
                 </div>
             </div>
