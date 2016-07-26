@@ -12,7 +12,7 @@ session_start();
 <?php
 	include 'adminlist.php'
 ?>
-
+<!--created by Wei Wei--!>
 </body>
 </html>
 

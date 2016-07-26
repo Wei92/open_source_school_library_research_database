@@ -1,4 +1,5 @@
 <?php
+// created by Wei Wei
 include 'DBConn.php';
 class Table{
 	//public $columns = array();

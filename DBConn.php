@@ -1,5 +1,5 @@
 <?php
-
+// created by Wei Wei
 class DBConn{
 
 	const HOST = 'localhost';

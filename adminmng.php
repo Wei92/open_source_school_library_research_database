@@ -1,4 +1,5 @@
 <?php
+// created by Wei Wei
 session_start();
 
 if (empty($_SESSION['adminid'])) {

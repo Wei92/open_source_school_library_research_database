@@ -1,4 +1,6 @@
-<?php include "header.php" ?>
+<?php 
+// created by Wei Wei
+include "header.php" ?>
 
 	<div class="nav">
 		<ul>

@@ -1,4 +1,5 @@
 <?php 
+// created by Wei Wei
 include "header.php";
 session_destroy();
 session_start();

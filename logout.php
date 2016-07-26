@@ -1,4 +1,5 @@
 <?php
+// created by Wei Wei
 session_start();
 session_unset();
 session_destroy();
