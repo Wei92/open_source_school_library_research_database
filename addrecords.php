@@ -28,7 +28,7 @@ session_start();
 <div class="main">
 	<h2 style="color:#fd7279">Add records</h2>
 	<p>Hi! Please complete the following form to submit the record.</p><br>
-	<form action="php-addrecords.php" method="get" id="addrecords" name="addrecords" id="ff">
+	<form action="php-addrecords.php" method="post" id="addrecords" name="addrecords" id="ff">
 		<table class="table-left">
 			<tr><td colspan="2" style="font-weight: bold;">These forms are mandatory:</td></tr>
 			<tr> <td>Title:</td> <td><input required="true" class="easyui-validatebox" type="text" size=50 name="title"></td> </tr>

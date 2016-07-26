@@ -3,8 +3,8 @@ include 'DBConn.php';
 // test capcha
 session_start();
 $validate="";
-if(isset($_GET["validate"])){
-	$validate=$_GET["validate"];
+if(isset($_POST["validate"])){
+	$validate=$_POST["validate"];
 	if($validate!=$_SESSION["authnum_session"]){
 	//判断session值与用户输入的验证码是否一致;
 	// capcha is wrong:
@@ -14,11 +14,11 @@ if(isset($_GET["validate"])){
 		// capcha is right, continue to insert sql into the database
 
 		// avoid dangerous sql injection
-		foreach ($_GET as $key => $value) {
+		foreach ($_POST as $key => $value) {
 			$value = mysql_real_escape_string($value);
 		}
 
-		$query = 'INSERT INTO libdb2 VALUES (\N,'.'"'.$_GET["title"].'", '.'"'.$_GET["format"].'", '.'"'.$_GET["year"].'", '. '"'.$_GET["author1"].'", '. '"'.$_GET["role1"].'", '. '"'.$_GET["affiliation1"].'", '. '"'.$_GET["author2"].'", '. '"'.$_GET["role2"].'", '. '"'.$_GET["affiliation2"].'", '. '"'.$_GET["author3"].'", '. '"'.$_GET["role3"].'", '. '"'.$_GET["affiliation3"].'", '. '"'.$_GET["author4"].'", '. '"'.$_GET["role4"].'", '. '"'.$_GET["affiliation4"].'", '. '"'.$_GET["author5"].'", '. '"'.$_GET["role5"].'", '. '"'.$_GET["affiliation5"].'", '. '"'.$_GET["country"].'", '. '"'.$_GET["conference"].'", '. '"'.$_GET["location"].'", '. '"'.$_GET["method1"].'", '. '"'.$_GET["method2"].'", '. '"'.$_GET["method3"].'", '. '"'.$_GET["source"].'", '. '"'.$_GET["abstract"].'", '. '"'.$_GET["class1"].'", '. '"'.$_GET["class2"].'", '. '"'.$_GET["class3"].'", '.'"1")';
+		$query = 'INSERT INTO libdb2 VALUES (\N,'.'"'.$_POST["title"].'", '.'"'.$_POST["format"].'", '.'"'.$_POST["year"].'", '. '"'.$_POST["author1"].'", '. '"'.$_POST["role1"].'", '. '"'.$_POST["affiliation1"].'", '. '"'.$_POST["author2"].'", '. '"'.$_POST["role2"].'", '. '"'.$_POST["affiliation2"].'", '. '"'.$_POST["author3"].'", '. '"'.$_POST["role3"].'", '. '"'.$_POST["affiliation3"].'", '. '"'.$_POST["author4"].'", '. '"'.$_POST["role4"].'", '. '"'.$_POST["affiliation4"].'", '. '"'.$_POST["author5"].'", '. '"'.$_POST["role5"].'", '. '"'.$_POST["affiliation5"].'", '. '"'.$_POST["country"].'", '. '"'.$_POST["conference"].'", '. '"'.$_POST["location"].'", '. '"'.$_POST["method1"].'", '. '"'.$_POST["method2"].'", '. '"'.$_POST["method3"].'", '. '"'.$_POST["source"].'", '. '"'.$_POST["abstract"].'", '. '"'.$_POST["class1"].'", '. '"'.$_POST["class2"].'", '. '"'.$_POST["class3"].'", '.'"1")';
 
 		//echo "<br>".$query;
 
