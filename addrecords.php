@@ -64,23 +64,23 @@ session_start();
 		<tr><td colspan="2" style="font-weight: bold;">These forms are optional:</td></tr>
 
 			<tr> <td>Role1:</td> <td><input  class="easyui-validatebox" name="role1" type="text" size="50"></td> </tr>
-			<tr> <td>Affliation1:</td> <td><input  class="easyui-validatebox" name="affliation1" type="text" size="50"></td> </tr>
+			<tr> <td>Affiliation1:</td> <td><input  class="easyui-validatebox" name="affiliation1" type="text" size="50"></td> </tr>
 
 			<tr> <td>Author2:</td> <td><input class="easyui-validatebox" name="author2" type="text" size="50"></td> </tr>
 			<tr> <td>Role2:</td> <td><input class="easyui-validatebox" name="role2" type="text" size="50"></td> </tr>
-			<tr> <td>Affliation2:</td> <td><input class="easyui-validatebox" name="affliation2" type="text" size="50"></td> </tr>
+			<tr> <td>Affiliation2:</td> <td><input class="easyui-validatebox" name="affiliation2" type="text" size="50"></td> </tr>
 
 			<tr> <td>Author3:</td> <td><input class="easyui-validatebox" name="author3" type="text" size="50"></td> </tr>
 			<tr> <td>Role3:</td> <td><input class="easyui-validatebox" name="role3" type="text" size="50"></td> </tr>
-			<tr> <td>Affliation3:</td> <td><input class="easyui-validatebox" name="affliation3" type="text" size="50"></td> </tr>
+			<tr> <td>Affiliation3:</td> <td><input class="easyui-validatebox" name="affiliation3" type="text" size="50"></td> </tr>
 
 			<tr> <td>Author4:</td> <td><input class="easyui-validatebox" name="author4" type="text" size="50"></td> </tr>
 			<tr> <td>Role4:</td> <td><input class="easyui-validatebox" name="role4" type="text" size="50"></td> </tr>
-			<tr> <td>Affliation4:</td> <td><input class="easyui-validatebox" name="affliation4" type="text" size="50"></td> </tr>
+			<tr> <td>Affiliation4:</td> <td><input class="easyui-validatebox" name="affiliation4" type="text" size="50"></td> </tr>
 
 			<tr> <td>Author5:</td> <td><input class="easyui-validatebox" name="author5" type="text" size="50"></td> </tr>
 			<tr> <td>Role5:</td> <td><input class="easyui-validatebox" name="role5" type="text" size="50"></td> </tr>
-			<tr> <td>Affliation5:</td> <td><input class="easyui-validatebox" name="affliation5" type="text" size="50"></td> </tr>
+			<tr> <td>Affiliation5:</td> <td><input class="easyui-validatebox" name="affiliation5" type="text" size="50"></td> </tr>
 
 			<tr> <td>Method2:</td> <td><input class="easyui-validatebox" type="text" name="method2" size="50"></td> </tr>
 			<tr> <td>Method3:</td> <td><input  class="easyui-validatebox" type="text" name="method3" size="50"></td> </tr>
