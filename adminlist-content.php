@@ -93,5 +93,6 @@
                            style="width:90px">Save</a>
                     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"
                         onclick="javascdript:$('#dlg').dialog('close')" style="width:90px">Close</a>
+                    <span style="color:red;" id="savealert">a</span>
                 </div>
             </div>

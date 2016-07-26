@@ -188,6 +188,7 @@
 
         // open dialogs
         function opendlg(a) {
+            $('#savealert').text("");
             if (a==1) {var row = $('#dg1').datagrid('getSelected');}
             if (a==2) {var row = $('#dg2').datagrid('getSelected');}
             if (a==3) {var row = $('#dg3').datagrid('getSelected');}
@@ -196,7 +197,7 @@
             i = row.id;
             if (row) {
                 $('#dlg').dialog('open');
-                $('#detail-form').form('load', 'data_updatedetail.php?id='+row.id);
+                $('#detail-form').form('load', 'data_updatedetail.php?id='+row.id); 
             } else
                 alert('Please select a reviewer first');
         }
@@ -215,20 +216,17 @@
                     return $(this).form('validate');
                 },
 
-                success: function(msg) {
-                        $('#detail-form').dialog('close');      // close the dialog
-                        $('#dg1').datagrid('reload'); // reload the user data
-                        $('#dg2').datagrid('reload');
-                        $('#dg3').datagrid('reload');
-                        $('#dg4').datagrid('reload');
+                success: function() {
+                        //$('#detail-form').dialog('close');      // close the dialog
+                        //$('#dg1').datagrid('reload'); // reload the user data
+                        //$('#dg2').datagrid('reload');
+                        //$('#dg3').datagrid('reload');
+                        //$('#dg4').datagrid('reload');
+                        $('#savealert').text("Save successfully!");
                 }
             });
 
-            $('#detail-form').dialog('close');      // close the dialog
-            $('#dg1').datagrid('reload'); // reload the user data
-            $('#dg2').datagrid('reload');
-            $('#dg3').datagrid('reload');
-            $('#dg4').datagrid('reload');
+            
         }
 
     
