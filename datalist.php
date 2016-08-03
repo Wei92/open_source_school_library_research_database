@@ -9,7 +9,7 @@
 
 
 
-    <table id="dg" class="easyui-datagrid" title="OSSLRD" style="width:auto;height:auto"
+    <table id="dg" class="easyui-datagrid" title="OSSLRD" style="width:auto;height:auto;"
             toolbar="#toolbar" pagination="true"  
             rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'getCfmRecordsInJson.php',method:'get',remoteFilter:false">
         <thead>
@@ -66,7 +66,11 @@
         // Create filter to search data
         $(function(){
              var dg = $('#dg');
-            dg.datagrid();  // create datagrid
+            dg.datagrid({
+                rownumbers:false,
+                pageSize:100,
+                pageList:[100,200,300],
+            });  // create datagrid
             dg.datagrid('enableFilter', [{
                 field:'year',
                 type:'numberbox',
