@@ -19,14 +19,23 @@ if(isset($_POST["validate"])){
 			$value = mysql_real_escape_string($value);
 		}
 
-		$query = 'INSERT INTO libdb2 VALUES (\N,'.'"'.$_POST["title"].'", '.'"'.$_POST["format"].'", '.'"'.$_POST["year"].'", '. '"'.$_POST["author1"].'", '. '"'.$_POST["role1"].'", '. '"'.$_POST["affiliation1"].'", '. '"'.$_POST["author2"].'", '. '"'.$_POST["role2"].'", '. '"'.$_POST["affiliation2"].'", '. '"'.$_POST["author3"].'", '. '"'.$_POST["role3"].'", '. '"'.$_POST["affiliation3"].'", '. '"'.$_POST["author4"].'", '. '"'.$_POST["role4"].'", '. '"'.$_POST["affiliation4"].'", '. '"'.$_POST["author5"].'", '. '"'.$_POST["role5"].'", '. '"'.$_POST["affiliation5"].'", '. '"'.$_POST["country"].'", '. '"'.$_POST["conference"].'", '. '"'.$_POST["location"].'", '. '"'.$_POST["method1"].'", '. '"'.$_POST["method2"].'", '. '"'.$_POST["method3"].'", '. '"'.$_POST["source"].'", '. '"'.$_POST["abstract"].'", '. '"'.$_POST["class1"].'", '. '"'.$_POST["class2"].'", '. '"'.$_POST["class3"].'", '.'"1")';
+		$content = array();
+		$content = $_POST;
+
+		foreach ($content as $key => $value) {
+			$content[$key] = addslashes($value);
+		}
+
+		$query = "INSERT INTO libdb2 VALUES(\N,'{$content['title']}','{$content['format']}','{$content['year']}','{$content['author1']}','{$content['role1']}','{$content['affiliation1']}','{$content['author2']}','{$content['role2']}','{$content['affiliation2']}','{$content['author3']}','{$content['role3']}','{$content['affiliation3']}','{$content['author4']}','{$content['role4']}','{$content['affiliation4']}','{$content['author5']}','{$content['role5']}','{$content['affiliation5']}','{$content['country']}','{$content['conference']}','{$content['location']}','{$content['method1']}','{$content['method2']}','{$content['method3']}','{$content['source']}','{$content['abstract']}','{$content['class1']}','{$content['class2']}','{$content['class3']}','1')";
 
 		//echo "<br>".$query;
 
 		// insert 
 		if (!$res = DBConn::getConnection()->query($query)) {
+			//echo $query;
         	die('There was an error running the query [' . $query->error . ']');
     	}else{
+    		//echo $query;
     		echo "<font color=green>Successfully add your records to our administrators. They will confirm the data as soon as possible. Thank you!</font>"; 
     		echo '<br><a href="'.'index.php'.'">Click here to the homepage of OSSLRD';
     	}

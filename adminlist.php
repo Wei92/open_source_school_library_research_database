@@ -101,7 +101,6 @@
             
         });
 
-
         // Get details by expanding records
         $('#dg1').datagrid({
             view: detailview,
