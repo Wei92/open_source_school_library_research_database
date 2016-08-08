@@ -9,13 +9,13 @@
     }
     $row = $res->fetch_assoc();
 
-    if ($row['auth']==0) {
+    /*if ($row['auth']==0) {
         $row['auth']="Confirmed";
     }elseif($row['auth']==1){
         $row['auth']="Not Confirmed";
     }else{
         $row['auth']="Deleted";
-    }
+    }*/
 
     echo json_encode($row);
     

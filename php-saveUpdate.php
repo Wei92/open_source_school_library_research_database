@@ -13,5 +13,7 @@ $query = "update libdb2 set title='{$parameters['title']}',format='{$parameters[
 if (!$res = DBConn::getConnection()->query($query)) {
     die('There was an error running the query [' . $query->error . ']');
     echo json_encode(array('errorMsg' => 'Some errors occured.'));
+}else{
+	echo 'Save Succesfully!';
 }
 ?>

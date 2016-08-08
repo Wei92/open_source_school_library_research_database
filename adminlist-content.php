@@ -54,7 +54,7 @@
 
             <tr> <td>Class1:</td> <td><input required="true" class="easyui-validatebox" type="text" name="class1" size="50"></td> </tr>
 
-            <tr> <td>Confirm?</td> <td><select name="auth" required="true" class="easyui-combobox"><option value="0" <?php if($_GET['auth'] == '0'){echo 'selected="selected"';} ?>>Confirmed</option><option value="1"<?php if($_GET['auth'] == '1'){echo 'selected="selected"';} ?> >Not Confirmed</option><option value="2" <?php if($_GET['auth'] == '2'){echo 'selected="selected"';} ?> >Deleted</option></select> </td> </tr>
+            <tr> <td>Confirm?</td> <td><select name="auth" required="true" class="easyui-combobox"><option value="0" >Confirmed</option><option value="1" >Not Confirmed</option><option value="2"  >Deleted</option></select> </td> </tr>
 
 
         </table>

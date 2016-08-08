@@ -215,8 +215,8 @@
                     return $(this).form('validate');
                 },
 
-                success: function() {
-                        $('#savealert').text("Save successfully!");
+                success: function(data) {
+                        $('#savealert').text(data);
                 }
             });
 
