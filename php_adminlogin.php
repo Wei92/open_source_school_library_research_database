@@ -11,7 +11,7 @@ if ($_POST['ref'] === $ref0) {
 
 	
  	foreach ($_POST as $key => $value) {
-		$value = mysql_escape_string($value);
+		$value = mysqli_escape_string($value);
 	}
 	
 

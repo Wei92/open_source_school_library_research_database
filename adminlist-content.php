@@ -29,10 +29,10 @@
 
                 <form id="detail-form" method="post">
                     <table class="table-left">
-            <tr><td colspan="2" style="font-weight: bold;">These forms are mandatory:</td></tr>
+            <tr><td colspan="2" style="font-weight: bold;">These fields are mandatory:</td></tr>
             <tr> <td>Title:</td> <td><input required="true" class="easyui-validatebox" type="text" size=50 name="title"></td> </tr>
 
-            <tr> <td>Format:</td> <td><select name="format" required="true" class="easyui-combobox"><option value="C">Conference(C)</option><option value="J">Journals(J)</option><option value="DT">Dissertations/Thesis(DT)</option><option value="R">Research papers(R)</option></select> </td> </tr>
+            <tr> <td>Format:</td> <td><select name="format" required="true" class="easyui-combobox"><option value="C" <?php if($_GET['format'] == 'C'){echo 'selected="selected"';} ?>>Conference(C)</option><option value="J" <?php if($_GET['format'] == 'J'){echo 'selected="selected"';} ?> >Journals(J)</option><option value="DT" <?php if($_GET['format'] == 'DT'){echo 'selected="selected"';} ?> >Dissertations/Thesis(DT)</option><option value="R"<?php if($_GET['format'] == 'R'){echo 'selected="selected"';} ?> >Research papers(R)</option></select> </td> </tr>
 
             <tr> <td>Year:</td> <td><input required="true" class="easyui-validatebox" name="year" type="text" size="4" maxlength="4" onkeyup='this.value=this.value.replace(/\D/gi,"")'></td> </tr>
 
@@ -54,7 +54,8 @@
 
             <tr> <td>Class1:</td> <td><input required="true" class="easyui-validatebox" type="text" name="class1" size="50"></td> </tr>
 
-            <tr> <td>Confirm?</td> <td><select name="auth" required="true" class="easyui-combobox"><option value="0">Confirmed</option><option value="1">Not Confirmed</option><option value="2">Deleted</option></select> </td> </tr>
+            <tr> <td>Confirm?</td> <td><select name="auth" required="true" class="easyui-combobox"><option value="0" <?php if($_GET['auth'] == '0'){echo 'selected="selected"';} ?>>Confirmed</option><option value="1"<?php if($_GET['auth'] == '1'){echo 'selected="selected"';} ?> >Not Confirmed</option><option value="2" <?php if($_GET['auth'] == '2'){echo 'selected="selected"';} ?> >Deleted</option></select> </td> </tr>
+
 
         </table>
         

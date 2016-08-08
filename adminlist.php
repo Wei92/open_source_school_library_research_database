@@ -6,6 +6,7 @@
     <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
     
     <script type="text/javascript" src="http://www.w3cschool.cc/try/jeasyui/datagrid-detailview.js"></script> 
+
     <!--add details to each records-->
     <style type="text/css">
         input{
@@ -204,7 +205,6 @@
 
         // save updates
         function saveUpdate(){
-            //alert(i);
 
             $('#detail-form').form('submit', {
 
@@ -216,11 +216,6 @@
                 },
 
                 success: function() {
-                        //$('#detail-form').dialog('close');      // close the dialog
-                        //$('#dg1').datagrid('reload'); // reload the user data
-                        //$('#dg2').datagrid('reload');
-                        //$('#dg3').datagrid('reload');
-                        //$('#dg4').datagrid('reload');
                         $('#savealert').text("Save successfully!");
                 }
             });

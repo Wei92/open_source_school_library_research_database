@@ -13,7 +13,7 @@ if ($_POST['ref1'] === $ref1 && $_POST['ref2'] === $ref2) {
 	
 	
 	foreach ($_POST as $key => $value) {
-		$value = mysql_escape_string($value);
+		$value = mysqli_escape_string($value);
 	}
 	
 

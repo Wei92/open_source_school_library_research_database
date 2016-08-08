@@ -3,7 +3,7 @@
 class ValidateCode {
  private $charset = 'abcdefghkmnprstuvwxyzABCDEFGHKMNPRSTUVWXYZ23456789';//随机因子
  private $code;//验证码
- private $codelen = 6;//验证码长度
+ private $codelen = 2;//验证码长度
  private $width = 130;//宽度
  private $height = 50;//高度
  private $img;//图形资源句柄

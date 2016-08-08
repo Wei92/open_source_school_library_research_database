@@ -16,7 +16,7 @@ if(isset($_POST["validate"])){
 
 		// avoid dangerous sql injection
 		foreach ($_POST as $key => $value) {
-			$value = mysql_real_escape_string($value);
+			$value = mysqli_real_escape_string($value);
 		}
 
 		$content = array();
