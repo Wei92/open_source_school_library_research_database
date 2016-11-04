@@ -5,8 +5,8 @@ include "header.php" ?>
 	<div class="nav">
 		<ul>
 			<li><a href="index.php" id="hover">Introduction</a></li>
-			<li><a href="student.php">For students</a></li>
-			<li><a href="researcher.php">For researchers</a></li>
+			<li><a href="studentresearcher.php" >For students</a></li>
+			<li><a href="studentresearcher.php" onclick='change("2")'>For researchers</a></li>
 			<li><a href="contact.php">Contact us</a></li>
 		</ul>
 		<div class="clear"></div>

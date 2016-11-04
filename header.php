@@ -12,3 +12,24 @@
 		<div class="logo2"><a href="index.php">Open Source School Library Research Database</a></div>
 	</div>
 </div>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+<script type="text/javascript">
+
+function change(a){
+	if (a==1){
+		$(".student").attr("id","hover");
+		$(".researcher").attr("id","");
+		$(".btn-addrecords").hide();
+		$(".hi-s").show();
+		$(".hi-r").hide();
+	}else{
+		$(".student").attr("id","");
+		$(".researcher").attr("id","hover");
+		$(".btn-addrecords").show();
+		$(".hi-r").show();
+		$(".hi-s").hide();
+	}
+}
+</script>
