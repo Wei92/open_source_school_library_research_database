@@ -41,7 +41,7 @@
 
             <tr> <td>Country:</td> <td><input required="true" class="easyui-validatebox" type="text" name="country" size="50"></td> </tr>
 
-            <tr> <td>Insititusion:</td> <td><input required="true" class="easyui-validatebox" type="text" name="conference" size="50"></td> </tr>
+            <tr> <td>Institution:</td> <td><input required="true" class="easyui-validatebox" type="text" name="conference" size="50"></td> </tr>
 
             <tr> <td>Location:</td> <td><input required="true" class="easyui-validatebox" type="text" name="location" size="50"></td> </tr>
 
@@ -60,7 +60,7 @@
         </table>
         
         <table class="table-right" >
-        <tr><td colspan="2" style="font-weight: bold;">These forms are optional:</td></tr>
+        <tr><td colspan="2" style="font-weight: bold;">These fields are optional:</td></tr>
 
             <tr> <td>Role1:</td> <td><input  class="easyui-validatebox" name="role1" type="text" size="50"></td> </tr>
             <tr> <td>Affiliation1:</td> <td><input  class="easyui-validatebox" name="affiliation1" type="text" size="50"></td> </tr>
