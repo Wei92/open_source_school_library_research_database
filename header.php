@@ -24,12 +24,15 @@ function change(a){
 		$(".btn-addrecords").hide();
 		$(".hi-s").show();
 		$(".hi-r").hide();
-	}else{
+	}
+	if(a==2){
 		$(".student").attr("id","");
 		$(".researcher").attr("id","hover");
 		$(".btn-addrecords").show();
 		$(".hi-r").show();
 		$(".hi-s").hide();
 	}
+
+
 }
 </script>
