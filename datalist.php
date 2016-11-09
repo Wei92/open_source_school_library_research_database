@@ -12,11 +12,18 @@
     <table id="dg" class="easyui-datagrid" title="OSSLRD" style="width:auto;height:auto;"
             toolbar="#toolbar" pagination="true"  
             rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'getCfmRecordsInJson.php',method:'get',remoteFilter:false">
-        <thead>
+        
+        <thead frozen="true">
             <tr>
                 <th data-options="field:'id'" sortable="true"  >ID</th>
-                <th data-options="field:'title'" sortable="true"   >Title</th>
-                <th data-options="field:'format'" sortable="true"   >Format</th>
+            </tr>
+        </thead>
+
+        <thead>
+            <tr>
+                
+                <th data-options="field:'title'" width="500" sortable="true"   >Title</th>
+                <th data-options="field:'format'" sortable="true" width="70"  >Format</th>
                 <th data-options="field:'year'" sortable="true"   >Year</th>
 
                 <th data-options="field:'author1'" sortable="true"   >Author1</th>
