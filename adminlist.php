@@ -104,6 +104,8 @@
 
         // Get details by expanding records
         $('#dg1').datagrid({
+            pageSize:100,
+            pageList:[30,50,100,200],
             view: detailview,
             detailFormatter:function(index,row){
                 return '<div class="ddv"></div>';
@@ -124,6 +126,8 @@
         });
 
         $('#dg2').datagrid({
+            pageSize:100,
+            pageList:[30,50,100,200],
             view: detailview,
             detailFormatter:function(index,row){
                 return '<div class="ddv"></div>';
@@ -144,6 +148,8 @@
         });
 
         $('#dg3').datagrid({
+            pageSize:200,
+            pageList:[30,50,100,200],
             view: detailview,
             detailFormatter:function(index,row){
                 return '<div class="ddv"></div>';
@@ -164,6 +170,8 @@
         });
 
         $('#dg4').datagrid({
+            pageSize:100,
+            pageList:[50,100,300,500],
             view: detailview,
             detailFormatter:function(index,row){
                 return '<div class="ddv"></div>';
@@ -223,18 +231,7 @@
             
         }
 
-        // pagination
-        var pager = $('#dg4').datagrid('getPager');    // get the pager of datagrid
-        pager.pagination({
-        showPageList:false,
-        buttons:[{
-            
-        }],
-        onBeforeRefresh:function(){
-            alert('before refresh');
-            return true;
-        }
-    });
+
 
     
     </script>
