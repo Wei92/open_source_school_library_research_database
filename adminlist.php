@@ -72,7 +72,7 @@
         
         // Create filter to search data
         $(function(){
-             var dg = $('#dg');
+             var dg = $('#dg4');
             dg.datagrid();  // create datagrid
             dg.datagrid('enableFilter', [{
                 field:'year',
@@ -222,6 +222,19 @@
 
             
         }
+
+        // pagination
+        var pager = $('#dg4').datagrid('getPager');    // get the pager of datagrid
+        pager.pagination({
+        showPageList:false,
+        buttons:[{
+            
+        }],
+        onBeforeRefresh:function(){
+            alert('before refresh');
+            return true;
+        }
+    });
 
     
     </script>

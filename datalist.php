@@ -13,6 +13,7 @@
             toolbar="#toolbar" pagination="true"  
             rownumbers="true" data-options="remoteSort:false,singleSelect:true,collapsible:true,url:'getCfmRecordsInJson.php',method:'get',remoteFilter:false">
         
+
         <thead frozen="true">
             <tr>
                 <th data-options="field:'id'" sortable="true"  >ID</th>
@@ -65,6 +66,25 @@
             </tr>
         </thead>
     </table>
+
+        <div id="toolbar" style="padding:3px">
+            <span>ID:</span>
+            <input id="itemid" style="line-height:20px;border:1px solid #ccc">
+            <span>Title:</span>
+            <input id="productid" style="line-height:20px;border:1px solid #ccc">
+            <span>Year:</span>
+            <input id="itemid" style="line-height:20px;border:1px solid #ccc">
+            <span>Author:</span>
+            <input id="productid" style="line-height:20px;border:1px solid #ccc">
+            <span>Method:</span>
+            <input id="itemid" style="line-height:20px;border:1px solid #ccc">
+            <br>
+            <span>Class:</span>
+            <input id="productid" style="line-height:20px;border:1px solid #ccc">
+            <span>Abstract:</span>
+            <input id="itemid" style="line-height:20px;border:1px solid #ccc">
+            <a href="#" class="easyui-linkbutton" plain="true" onclick="doSearch()">Search</a>
+        </div>
 
 
     <script type="text/javascript" src="easyui/datagrid-filter.js"></script>
