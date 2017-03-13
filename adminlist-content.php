@@ -1,8 +1,8 @@
  <thead>
                     <tr>
                         <th data-options="field:'id'" sortable="true"  >ID</th>
-                        <th data-options="field:'title'" sortable="true"   >Title</th>
-                        <th data-options="field:'format'" sortable="true"   >Format</th>
+                        <th data-options="field:'title'" sortable="true"  width="500" >Title</th>
+                        <th data-options="field:'format'" sortable="true" width="70"  >Format</th>
                         <th data-options="field:'year'" sortable="true"   >Year</th>
 
                         <th data-options="field:'author1'" sortable="true"   >Author1</th>

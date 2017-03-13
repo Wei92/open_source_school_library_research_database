@@ -28,14 +28,14 @@
                 <th data-options="field:'year'" sortable="true"   >Year</th>
 
                 <th data-options="field:'author1'" sortable="true"   >Author1</th>
-                <th data-options="field:'role1'" sortable="true"   >Role1</th>
-                <th data-options="field:'affiliation1'" sortable="true"   >Affiliation1</th>
+                <th data-options="field:'role1'" width="250" sortable="true"   >Role1</th>
+                <th data-options="field:'affiliation1'" width="250" sortable="true"   >Affiliation1</th>
 
                 <th data-options="field:'author2'" sortable="true"   >Author2</th>
-                <th data-options="field:'role2'" sortable="true"  >Role2</th>
-                <th data-options="field:'affiliation2'" sortable="true"  >Affiliation2</th>
+                <th data-options="field:'role2'" width="250" sortable="true"  >Role2</th>
+                <th data-options="field:'affiliation2'" width="250" sortable="true"  >Affiliation2</th>
 
-                <th data-options="field:'author3'" sortable="true"  >Author3</th>
+                <!--<th data-options="field:'author3'" sortable="true"  >Author3</th>
                 <th data-options="field:'role3'" sortable="true"  >Role3</th>
                 <th data-options="field:'affiliation3'" sortable="true"  >Affiliation3</th>
 
@@ -45,7 +45,7 @@
 
                 <th data-options="field:'author5'" sortable="true"  >Author5</th>
                 <th data-options="field:'role5'" sortable="true"  >Role5</th>
-                <th data-options="field:'affiliation5'" sortable="true"  >Affiliation5</th>
+                <th data-options="field:'affiliation5'" sortable="true"  >Affiliation5</th>-->
 
                 <th data-options="field:'country'" sortable="true"  >Country</th>
                 <th data-options="field:'conference'" sortable="true"  >Conference</th>
@@ -55,8 +55,8 @@
                 <th data-options="field:'method2'" sortable="true"  >Method2</th>
                 <th data-options="field:'method3'" sortable="true"  >Method3</th>
 
-                <th data-options="field:'source'" sortable="true"  >Source</th>
-                <th data-options="field:'abstract'" sortable="true"  >Abstract</th>
+                <!--<th data-options="field:'source'" sortable="true"  >Source</th>-->
+                <!--<th data-options="field:'abstract'" sortable="true"  >Abstract</th>-->
 
                 <th data-options="field:'class1'" sortable="true"  >Class1</th>
                 <th data-options="field:'class2'" sortable="true"  >Class2</th>
@@ -67,25 +67,32 @@
         </thead>
     </table>
 
+        <!-- search button
         <div id="toolbar" style="padding:3px">
-            <span>ID:</span>
-            <input id="itemid" style="line-height:20px;border:1px solid #ccc">
-            <span>Title:</span>
-            <input id="productid" style="line-height:20px;border:1px solid #ccc">
-            <span>Year:</span>
-            <input id="itemid" style="line-height:20px;border:1px solid #ccc">
-            <span>Author:</span>
-            <input id="productid" style="line-height:20px;border:1px solid #ccc">
-            <span>Method:</span>
-            <input id="itemid" style="line-height:20px;border:1px solid #ccc">
-            <br>
-            <span>Class:</span>
-            <input id="productid" style="line-height:20px;border:1px solid #ccc">
-            <span>Abstract:</span>
-            <input id="itemid" style="line-height:20px;border:1px solid #ccc">
+            <table>
+                <tr>
+                    <th>
+                        <span>Author:</span>
+                        <input id="s_author" style="line-height:20px;border:1px solid #ccc">
+                    </th>
+                    <th>
+                        <span>Method:</span>
+                        <input id="s_method" style="line-height:20px;border:1px solid #ccc">
+                    </th>
+                    <th>
+                        <span>Category:</span>
+                        <input id="s_class" style="line-height:20px;border:1px solid #ccc">
+                    </th>
+                    <th>
+                        <span>Search in abstract:</span>
+                        <input id="s_abstract" style="line-height:20px;border:1px solid #ccc">
+                    </th>
+                </tr>
+            </table>
+            
             <a href="#" class="easyui-linkbutton" plain="true" onclick="doSearch()">Search</a>
         </div>
-
+		-->
 
     <script type="text/javascript" src="easyui/datagrid-filter.js"></script>
     <script type="text/javascript">
@@ -147,6 +154,13 @@
                 $('#dg').datagrid('fixDetailRowHeight',index);
             }
         });
+        
+        // search on the top
+       // function doSearch(){
+		//	$('#dg').datagrid('load',{
+		//		s_author: $('#s_author').val(),
+		//	});
+		//}
     
     </script>
 
