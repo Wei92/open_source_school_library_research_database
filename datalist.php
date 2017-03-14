@@ -67,7 +67,7 @@
         </thead>
     </table>
 
-        <!-- search button
+        <!--
         <div id="toolbar" style="padding:3px">
             <table>
                 <tr>
@@ -155,8 +155,8 @@
             }
         });
         
-        // search on the top
-       // function doSearch(){
+         //search on the top
+        //function doSearch(){
 		//	$('#dg').datagrid('load',{
 		//		s_author: $('#s_author').val(),
 		//	});

@@ -88,6 +88,7 @@ session_start();
 
 			<tr> <td>Class2:</td> <td><input class="easyui-validatebox" type="text" name="class2" size="50"></td> </tr>
 			<tr> <td>Class3:</td> <td><input class="easyui-validatebox" type="text" name="class3" size="50"></td> </tr>
+			<tr> <td>Proquest ID:</td> <td><input class="easyui-validatebox" type="text" name="proquestNo" size="50"></td> </tr>
 		</table>
 
 		

@@ -16,6 +16,7 @@
     	$format = "Research Paper(R)";
     }elseif ($row['format']=="DT") {
     	$format = "Dissertation/Thesis(DT)";
+        echo "Proquest ID: ".$row['proquestNo']."<br>";
     }else{
     	$format = $row['format'];
     }

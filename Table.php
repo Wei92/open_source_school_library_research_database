@@ -82,13 +82,13 @@ class Table{
 		echo json_encode($this->items);
 	}
 	
-	//public function doSearch($s_author){
-	//	$query = "Select * From {$this->table} where author1 like '$s_author%'";
-	//	while($result->fetch_assoc()){
-	//		array_push($this->items, $row);
-	//	}
-	//	echo json_encode($this->items);
-	//}
+	public function doSearch($s_author){
+		$query = "Select * From {$this->table} where author1 like '$s_author%'";
+		while($result->fetch_assoc()){
+			array_push($this->items, $row);
+		}
+		echo json_encode($this->items);
+	}
 
 }
 

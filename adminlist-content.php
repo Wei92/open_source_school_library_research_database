@@ -56,6 +56,7 @@
 
             <tr> <td>Confirm?</td> <td><select name="auth" required="true" class="easyui-combobox"><option value="0" >Confirmed</option><option value="1" >Not Confirmed</option><option value="2"  >Deleted</option></select> </td> </tr>
 
+            <tr> <td>Proquest ID:</td> <td><input class="easyui-validatebox" type="text" name="proquestNo" size="50"></td> </tr>
 
         </table>
         
@@ -86,6 +87,7 @@
 
             <tr> <td>Class2:</td> <td><input class="easyui-validatebox" type="text" name="class2" size="50"></td> </tr>
             <tr> <td>Class3:</td> <td><input class="easyui-validatebox" type="text" name="class3" size="50"></td> </tr>
+
         </table>
         <div class="clear"></div>
                 </form>

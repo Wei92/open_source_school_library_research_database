@@ -6,9 +6,8 @@ $mytable->getCfmRecordsInJson();
 
 
 // do search in users' page
-//$s_author = isset($_POST['s_author']) ? mysql_real_escape_string($_POST['s_author']) : '';
+//$s_author = mysql_real_escape_string($_POST['s_author']);
 //$mytable->doSearch($s_author);
-
 
 
 ?>
