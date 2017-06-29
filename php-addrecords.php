@@ -26,7 +26,7 @@ if(isset($_POST["validate"])){
 			$content[$key] = addslashes($value);
 		}
 
-		$query = "INSERT INTO libdb2 VALUES(\N,'{$content['title']}','{$content['format']}','{$content['year']}','{$content['author1']}','{$content['role1']}','{$content['affiliation1']}','{$content['author2']}','{$content['role2']}','{$content['affiliation2']}','{$content['author3']}','{$content['role3']}','{$content['affiliation3']}','{$content['author4']}','{$content['role4']}','{$content['affiliation4']}','{$content['author5']}','{$content['role5']}','{$content['affiliation5']}','{$content['country']}','{$content['conference']}','{$content['location']}','{$content['method1']}','{$content['method2']}','{$content['method3']}','{$content['source']}','{$content['abstract']}','{$content['class1']}','{$content['class2']}','{$content['class3']}','1',{$content['proquestNo']})";
+		$query = "INSERT INTO libdb2 VALUES(\N,'{$content['title']}','{$content['format']}','{$content['year']}','{$content['author1']}','{$content['role1']}','{$content['affiliation1']}','{$content['author2']}','{$content['role2']}','{$content['affiliation2']}','{$content['author3']}','{$content['role3']}','{$content['affiliation3']}','{$content['author4']}','{$content['role4']}','{$content['affiliation4']}','{$content['author5']}','{$content['role5']}','{$content['affiliation5']}','{$content['country']}','{$content['conference']}','{$content['location']}','{$content['method1']}','{$content['method2']}','{$content['method3']}','{$content['source']}','{$content['abstract']}','{$content['class1']}','{$content['class2']}','{$content['class3']}','1','{$content['proquestNo']}','{$content['methodplace']}')";
 
 		//echo "<br>".$query;
 

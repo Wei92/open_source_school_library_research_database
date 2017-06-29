@@ -195,13 +195,14 @@ body{
 .table-left{
 	width: 500px;
 	float: left;
-	border-right: 1px solid #ccc;
+	
 	padding-right: 40px;
 }
 
 .table-right{
 	width: 530px;
 	padding-left: 40px;
+	border-left: 1px solid #ccc;
 }
 
 #addsubmit{

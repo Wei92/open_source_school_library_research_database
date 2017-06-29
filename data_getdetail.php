@@ -29,6 +29,7 @@
 	echo "<p>Author: ".$row['author1']."</p>";
 	echo "<p>Classification: ".$row['class1']." ".$row['class2']." ".$row['class3']." "."</p>";
 	echo "<p>Method: ".$row['method1']." ".$row['method2']." ".$row['method3']." "."</p>";
+    echo "<p>Location that research took place:".$row['methodplace']." "."</p>";
 	echo "<p>Abstract: ".$row['abstract']."</p>";
 	echo "<p>Link:".'<a href="'.$row['source'].'"target="'.'_blank">'.$row['source']."</a></p>";
 	echo "</div>";

@@ -18,8 +18,8 @@ session_start();
 	<div class="nav">
 		<ul>
 			<li><a href="index.php" >Introduction</a></li>
-			<li><a href="student.php" >For students</a></li>
-			<li><a href="researcher.php">For researchers</a></li>
+			<li><a href="studentresearcher.php?ii=1" >For students</a></li>
+			<li><a href="studentresearcher.php?ii=2">For researchers</a></li>
 			<li><a href="contact.php">Contact us</a></li>
 		</ul>
 		<div class="clear"></div>
@@ -89,6 +89,7 @@ session_start();
 			<tr> <td>Class2:</td> <td><input class="easyui-validatebox" type="text" name="class2" size="50"></td> </tr>
 			<tr> <td>Class3:</td> <td><input class="easyui-validatebox" type="text" name="class3" size="50"></td> </tr>
 			<tr> <td>Proquest ID:</td> <td><input class="easyui-validatebox" type="text" name="proquestNo" size="50"></td> </tr>
+			<tr> <td>Location that research took place:</td> <td><input class="easyui-validatebox" type="text" name="methodplace" size="50"></td> </tr>
 		</table>
 
 		

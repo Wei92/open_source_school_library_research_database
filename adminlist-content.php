@@ -24,7 +24,7 @@
             </thead>
             </table>
 
-            <div id="dlg" class="easyui-dialog" style="top:10%;width:1090px;height:510px;padding:0 20px;"
+            <div id="dlg" class="easyui-dialog" style="top:10%;width:1090px;height:auto; padding:0 10px;"
              closed="true" buttons="#reviewer-dlg-buttons">
 
                 <form id="detail-form" method="post">
@@ -56,7 +56,19 @@
 
             <tr> <td>Confirm?</td> <td><select name="auth" required="true" class="easyui-combobox"><option value="0" >Confirmed</option><option value="1" >Not Confirmed</option><option value="2"  >Deleted</option></select> </td> </tr>
 
-            <tr> <td>Proquest ID:</td> <td><input class="easyui-validatebox" type="text" name="proquestNo" size="50"></td> </tr>
+            <tr><td></td></tr>
+
+            <tr>
+            <div id="saveEdit">
+                    <td><a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUpdate()"
+                           style="width:90px">Save</a></td>
+                    <td><a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"
+                        onclick="javascdript:$('#dlg').dialog('close')" style="width:90px">Close</a></td>
+                    
+                </div>
+            </tr>
+
+            <tr><td colspan="2"><span style="color:red;" id="savealert">a</span></td></tr>
 
         </table>
         
@@ -88,14 +100,12 @@
             <tr> <td>Class2:</td> <td><input class="easyui-validatebox" type="text" name="class2" size="50"></td> </tr>
             <tr> <td>Class3:</td> <td><input class="easyui-validatebox" type="text" name="class3" size="50"></td> </tr>
 
+            <tr> <td>Proquest ID:</td> <td><input class="easyui-validatebox" type="text" name="proquestNo" size="50"></td> </tr>
+
+            <tr> <td>Location that research took place:</td> <td><input class="easyui-validatebox" type="text" name="methodplace" size="50"></td> </tr>
+
         </table>
         <div class="clear"></div>
                 </form>
-                <div id="saveEdit">
-                    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUpdate()"
-                           style="width:90px">Save</a>
-                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"
-                        onclick="javascdript:$('#dlg').dialog('close')" style="width:90px">Close</a>
-                    <span style="color:red;" id="savealert">a</span>
-                </div>
+                
             </div>
