@@ -7,10 +7,10 @@ $validate="";
 if(isset($_POST["validate"])){
 	$validate=$_POST["validate"];
 	if($validate!=$_SESSION["authnum_session"]){
-	//判断session值与用户输入的验证码是否一致;
-	// capcha is wrong:
-	echo "<font color=red>Capcha is wrong. Please re-enter the data.</font>";
-	echo ""; 
+		// check if the value of session is equal to users' input;
+		// capcha is wrong:
+		echo "<font color=red>Capcha is wrong. Please re-enter the data.</font>";
+		echo ""; 
 	}else{
 		// capcha is right, continue to insert sql into the database
 

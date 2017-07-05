@@ -1,3 +1,6 @@
+  <?php 
+// created by Wei Wei
+?>
     <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>

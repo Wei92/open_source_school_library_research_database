@@ -1,3 +1,6 @@
+   <?php 
+// created by Wei Wei
+?>
     <div class="main">
      <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
