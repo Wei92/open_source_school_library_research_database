@@ -1,5 +1,6 @@
  <?php 
 // created by Wei Wei
+// content of adminlist, the form and the dialog
 ?>
  <thead>
                     <tr>
@@ -27,6 +28,7 @@
             </thead>
             </table>
 
+			<!--dialog, the form to edit records-->
             <div id="dlg" class="easyui-dialog" style="top:10%;width:1090px;height:auto; padding:0 10px;"
              closed="true" buttons="#reviewer-dlg-buttons">
 

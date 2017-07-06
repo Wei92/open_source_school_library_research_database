@@ -1,12 +1,15 @@
 <?php
 // created by Wei Wei
+
 	include 'DBConn.php';
 
-	$id = $_REQUEST['id'];
-	$query = "select * from libdb2 where id='$id'";
+	$id = $_REQUEST['id']; // sanitize the followed query
+	$query = "select * from libdb2 where id='$id'"; // get all data of selected record
 	if (!$res = DBConn::getConnection()->query($query)) {
         die('There was an error running the query [' . $query->error . ']');
     }
+    
+    // get full format
     $row = $res->fetch_assoc();
     if ($row['format']=="C") {
     	$format = "Conference(C)";
@@ -21,6 +24,7 @@
     	$format = $row['format'];
     }
 
+	// print all the details of the selected record
     echo '<div class="data_detail">';
     echo "<p>[OVERVIEW]</p>";
 	echo "<p>Title: ".$row['title']."</p>";

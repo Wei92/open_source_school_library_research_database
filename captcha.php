@@ -1,5 +1,6 @@
 <?php
 // created by Wei Wei
+// create an object of ValidateCode
 session_start();
 require 'ValidateCode.php';  //include the class of captcha
 $_vc = new ValidateCode();  // an object of the class

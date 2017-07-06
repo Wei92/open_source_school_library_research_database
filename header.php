@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>OSSLRD</title>
+	<!--created by Wei Wei-->
 </head>
 <link rel="stylesheet" type="text/css" href="style.css">
 <body>
@@ -18,6 +19,7 @@
 <script type="text/javascript">
 
 function change(a){
+	// if user click header of "For students"
 	if (a==1){
 		$(".student").attr("id","hover");
 		$(".researcher").attr("id","");
@@ -25,6 +27,8 @@ function change(a){
 		$(".hi-s").show();
 		$(".hi-r").hide();
 	}
+	
+	// if user click header of "For researchers"
 	if(a==2){
 		$(".student").attr("id","");
 		$(".researcher").attr("id","hover");

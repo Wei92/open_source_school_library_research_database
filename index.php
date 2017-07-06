@@ -1,12 +1,13 @@
 <?php 
 // created by Wei Wei
+// webpage
 include "header.php" ?>
 
 	<div class="nav">
 		<ul>
 			<li><a href="index.php" id="hover">Introduction</a></li>
-			<li><a href="studentresearcher.php?ii=1">For students</a></li>
-			<li><a href="studentresearcher.php?ii=2">For researchers</a></li>
+			<li><a href="studentresearcher.php?ii=1">For students</a></li> <!--send data to studentresearcher.php, showing which tab the user clicked-->
+			<li><a href="studentresearcher.php?ii=2">For researchers</a></li> <!--send data to studentresearcher.php, showing which tab the user clicked-->
 			<li><a href="contact.php">Contact us</a></li>
 		</ul>
 		<div class="clear"></div>

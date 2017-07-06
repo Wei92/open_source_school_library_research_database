@@ -1,8 +1,9 @@
 <?php
 // created by Wei Wei
+// php form - admin sign up
 include_once 'DBConn.php';
 
-// test captcha
+// test captcha first
 session_start();
 $validate="";
 

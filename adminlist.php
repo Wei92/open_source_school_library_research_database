@@ -1,5 +1,6 @@
    <?php 
 // created by Wei Wei
+// webpage
 ?>
     <div class="main">
      <link rel="stylesheet" type="text/css" href="style.css">
@@ -17,9 +18,10 @@
         }
     </style>
 
-
+	<!--tabs-->
     <div id="tt" class="easyui-tabs" style="width:auto;height:auto;">
 
+		<!--tab of not confirmed recoreds-->
         <div title="Not Confirmed Records" style="padding:20px;display:none;">    
             <div id="reviewerToolbar">
                 <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick='opendlg("1")'>Open dialog to edit selected record</a>
@@ -31,7 +33,7 @@
         </div>
 
 
-
+	<!--tab of deleted recoreds-->
     <div title="Deleted Records" data-options="closable:false" style="overflow:auto;padding:20px;display:none;">
        <div id="reviewerToolbar">
                 <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick='opendlg("2")'>Open dialog to edit selected record</a>
@@ -42,7 +44,7 @@
                <?php include 'adminlist-content.php' ?> 
     </div>
 
-
+	<!--tab of confirmed recoreds-->
     <div title="Confirmed Records" data-options="closable:false" style="padding:20px;display:none;">
         <div id="reviewerToolbar">
                 <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick='opendlg("3")'>Open dialog to edit selected record</a>

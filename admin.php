@@ -1,5 +1,6 @@
 <?php
 // created by Wei Wei
+// webpage
 session_destroy();
 session_start();
 ?>

@@ -1,5 +1,6 @@
 <?php 
 // created by Wei Wei
+// webpage
 include "header.php";
 session_destroy();
 session_start();
@@ -106,6 +107,7 @@ session_start();
 <?php  include "footer.php" ?>
 
 <script type="text/javascript">
+	// easyui validate form
 	$('#ff').form({
 		
 		onSubmit:function(){
