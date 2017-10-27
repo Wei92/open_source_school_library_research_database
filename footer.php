@@ -6,6 +6,6 @@
 		</div>
 	</div>
 
-	<!--created by Wei Wei--!>
+	<!--created by Wei Wei -->
 </body>
 </html>

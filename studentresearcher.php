@@ -18,7 +18,7 @@ if ($_GET['ii']==1){
 
 
 	<br>
-	<div class="btn-addrecords" hidden="true"><a href="addrecords.php">Click here to add records into the database.</a></div>
+	<div class="btn-addrecords" hidden="true"><a href="addrecords.php" target="_blank">Click here to add records into the database.</a></div>
 	<br>
 	<script type="text/javascript">$(".student").attr("id","hover");</script>
 	');
